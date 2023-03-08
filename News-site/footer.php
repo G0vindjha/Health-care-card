@@ -12,7 +12,7 @@
                         while($row = mysqli_fetch_assoc($result))
                         {
                 ?>
-                <span><?php echo $row['footdesc'];?></span>
+                <span><?php echo $row['footerdesc'];?></span>
                 <?php
                         }
                     }

@@ -27,7 +27,7 @@ switch($page){
             $sql_title = "SELECT * FROM category WHERE category_id = {$_GET['cid']}";
             $result_title = mysqli_query($conn,$sql_title) or die("Query Failed!!!");
             $row_title = mysqli_fetch_assoc($result_title);
-            $page_title = $row_title['category_name']." News";
+            $page_title = $row_title['category_name']."News";
         }else{
             $page_title = "NO post found!!!";
         }
@@ -90,8 +90,12 @@ switch($page){
                     }
                 ?>
             </div>
+            <div>
+            <a href="./userRegistration.php"><button class="btn bg-primary">Login/SignUp</button></a>
+            </div>
             <!-- /LOGO -->
         </div>
+       
     </div>
 </div>
 <!-- /HEADER -->

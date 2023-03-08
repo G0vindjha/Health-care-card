@@ -1,7 +1,6 @@
 <?php
 include 'config.php';
 $loguname = $_GET['loguname'];
-$logfname = $_GET['logfname'];
 
 if(isset($_POST['save']))
 {
@@ -31,7 +30,7 @@ if(isset($_POST['save']))
     $loginfections = implode(",",$arr2);
     $sql = "INSERT INTO userallergeticinformation (firstname, username, allergies, injuries, infections) VALUES ('{$logfname}','{$loguname}','{$logallergies}','{$loginjuries}','{$loginfections}')";
       if(mysqli_query($conn,$sql)){
-            header("Location:{$hostname}/userinfopage.php?loguname={$loguname}");
+            header("Location:{$hostname}/useremployerdetails.php?loguname={$loguname}");
         }
 }
 

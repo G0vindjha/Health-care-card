@@ -4,20 +4,28 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="./images/Sam.jpeg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <img src="./images/modiji.jpg" style="width:100%">
+  <div class="text">India consistently trying to minimise dependence on foreign countries in health sector: PM Modi <br>
+  <a class='read-more bg-primary' href='single.php?id=81'>read more</a>
+  </div>
+  
+
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="./images/Sam.jpeg" style="width:100%">
-  <div class="text">Caption Two</div>
+  <img src="./images/pexels-pixabay-160846.jpg" style="width:100%">
+  <div class="text">How to make Holi safer for your pets: A quick guide.<br>
+  <a class='read-more bg-primary' href='single.php?id=73'>read more</a>
+  </div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="./images/Sam.jpeg" style="width:100%">
-  <div class="text">Caption Three</div>
+  <img src="./images/pexels-pixabay-356040.jpg" style="width:100%">
+  <div class="text">Bharat Biotech dispatches first shipments of iNCOVACC across India<br> 
+  <a class='read-more bg-primary' href='single.php?id=77'>read more</a>
+  </div>
 </div>
 
 </div>

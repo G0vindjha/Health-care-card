@@ -10,6 +10,7 @@ $loguname = $_GET['loguname'];
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Name</title>
 </head>
@@ -42,7 +43,7 @@ $loguname = $_GET['loguname'];
             {
         ?>
         <div>
-        <div style="margin-top:10px;padding:10px width: 500px;height: 35px;border-radius: 15px 50px;background: #3399ff;">
+        <div  style="margin-top:10px;padding:10px width: 500px;height: 35px;border-radius: 15px 50px;background: #3399ff;">
         <h3 class="child" style="margin-left:15px;">Patient Id:<?php echo $row1['patientid'] ?></h3>
         <h3 class="child" style="margin-left:25% ;"><?php echo $row1['firstname'].' '.$row1['lastname']; ?></h3>
         <h3 class="child" style="margin-left:22% ;">Contact:<?php echo $row1['umnumber'] ?></h3>

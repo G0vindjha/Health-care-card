@@ -15,7 +15,7 @@ if(isset($_POST['save']))
     }
     $sql = "INSERT INTO useremployerdetails (firstname, username, employername, employementno, employercontact, employeremail, employeraddress, profession) VALUES ('{$logfname}','{$loguname}','{$logemployername}','{$logemployementno}','{$logemployercontact}','{$logemployeremail}','{$logemployeraddress}','{$logprofession}')";
     if(mysqli_query($conn,$sql)){
-            header("Location:{$hostname}/injuriesandallergies.php?loguname={$loguname}&logfname={$logfname}");
+            header("Location:{$hostname}/userinfopage.php?loguname={$loguname}");
         }
 
 }

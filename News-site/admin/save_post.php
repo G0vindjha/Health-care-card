@@ -16,7 +16,7 @@ if(isset($_FILES['fileToUpload'])){
         $errors[] = "This Extension File Is Not Allowed";
     }
 
-    if($file_size > 2097152)
+    if($file_size > 5097152)
     {
         $errors[] = "File Size Must Be 2 MB or lower";
     }
