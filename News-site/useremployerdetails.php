@@ -1,7 +1,6 @@
 <?php
 include 'config.php';
 $loguname = $_GET['loguname'];
-$logfname = $_GET['logfname'];
 if(isset($_POST['save']))
 {
     $logemployername=mysqli_real_escape_string($conn,$_POST['employername']);
