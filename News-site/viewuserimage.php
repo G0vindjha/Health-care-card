@@ -59,7 +59,7 @@ $logfname = $_GET['logfname'];
                             </div>
                           </div>
                           <div class="form-group ">
-                            <button class="btn mt-4" name="save"><a href="./injuriesandallergies.php?loguname=<?php echo $_GET['loguname'];; ?>">Save</a> </button>
+                            <button class="btn mt-4"><a href="./injuriesandallergies.php?loguname=<?php echo $_GET['loguname'];; ?>">Save</a> </button>
                           </div>
 
                         </form>
