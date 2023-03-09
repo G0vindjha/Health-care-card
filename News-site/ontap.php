@@ -54,7 +54,7 @@ $loguname = $_GET['loguname'];
             <br><br>
         </div>
         <div class="parent" style="display:flex;flex-direction:row;justify-content:center">
-            <div class="child" style="margin-left:4%"><button class="btn"><a class="linkDecoration" href="./userRegistration.php?loguname=<?php echo $loguname?>">View Precription</a></button></div>
+            <div class="child" style="margin-left:4%"><button class="btn"><a class="linkDecoration" href="./userRegistration.php?loguname=<?php echo $loguname?>">Add Precription</a></button></div>
             <div class="child" style="margin-left:5%"><button class="btn"><a class="linkDecoration" href="./viewPrescription.php?loguname=<?php echo $loguname?>">View Precription</a></button></div>
             <div class="child" style="margin-left:5%"><button class="btn"><a class="linkDecoration" href="./addlabreport.php?loguname=<?php echo $loguname?>">Add Lab Report</a></button></div>
             <div class="child" style="margin-left:5%"><button class="btn"><a class="linkDecoration" href="./alart.php">Send </br> Alart</a></button></div>

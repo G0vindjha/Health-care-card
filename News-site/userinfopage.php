@@ -16,7 +16,7 @@ $loguname = $_GET['loguname'];
 </head>
 <body>
     <?php
-    include 'header.php'
+    include 'header.php';
     ?>
     <div>
     <center><div class="avt">
@@ -258,7 +258,6 @@ $loguname = $_GET['loguname'];
             <h3>Date : <?php echo $row7['date'];?></h3>
             <h3>Hospital :<?php echo $row7['hospitalname'];?></h3>
             <h3>Doctor Name : <?php echo $row7['doctorfname']." ".$row7['doctorlname'];?></h3>
-            <h3>Doctor Id : <?php echo $row7['doctorid'];?></h3>
             <button class="btn"><a class="linkDecoration" href="./viewsingleprescription.php?loguname=<?php echo $loguname?>&deseasename=<?php echo $row7['diseasename']?>">View Prescribed Medicine</a></button>
         </div>
         <?php

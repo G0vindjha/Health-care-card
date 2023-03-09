@@ -1,13 +1,6 @@
 <?php
 include 'config.php';
-$loguname = $_GET['loguname'];
-$logfname = 'Govind';
-$loglname = 'Jha';
-$logpid = 41673163612;
-$logdfname = 'Dharm';
-$logdlname = 'Patel';
-$logduname = 'Dharm';
-$logdid = '12345678910';
+include 'header.php';
 ?>
 
 
@@ -30,7 +23,7 @@ $logdid = '12345678910';
     <div class="parent" style="background-color:white;margin-left:30%;margin-right:30%;margin-top:10%;border-radius:20px;">
         <div>
             <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
-            <center><h1>Log In</h1></center>
+            <center><h1>Write Queries</h1></center>
         </div>
         <div class="user-login flex">
             <center><input class="log" type="email" placeholder="Username">
@@ -45,20 +38,14 @@ $logdid = '12345678910';
         </div>
         <div>
             <br>
-            <center><button class="btn"><a class="linkDecoration" href="./addprescription.php?pfn=<?php echo $logfname?>&did=<?php echo $logdid?>&pln=<?php echo $loglname?>&pun=<?php echo $loguname?>&pid=<?php echo $logpid?>&dfn=<?php echo $logdfname?>&dln=<?php echo $logdlname?>&dun=<?php echo $logduname?>">Login</a></button></center>
+            <center><textarea name="text" id="text" placeholder="Comment...." cols="30" rows="10" class="log"></textarea><img style="visibility:hidden" src="./images/lock1-black-18dp.svg" alt=""></center>
+            
+        </div>
+        <div>
+            <br>
+            <center><input class="btn" type="submit" value="submit" ></center>
             <br><br>
         </div>
-        <div class="parent">
-            <div class="child">
-                <input type="checkbox" style="margin-left:10%;"/>
-                <label>Remember me</label>
-            </div>
-            <div class="child">
-            <a href="#" style="margin-left:35%;">Forgot Password?</a>
-            </div>
-        </div>
-        <br>
-        <br>
 
       
 

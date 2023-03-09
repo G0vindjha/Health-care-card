@@ -1,15 +1,26 @@
 <?php
 include 'config.php';
 $username =$_GET['loguname'];
-
+$logduname=$_GET['logduname'];
+echo $logduname;
 $query = " select * from usercontactdetails  where username = '{$username}'";
+$query2 = " select * from doctordetails  where doctoruname = '{$logduname}'";
 $result = mysqli_query($conn, $query) or die("Query Faild!!"); 
  if(mysqli_num_rows($result)>0){
-    while($row = mysqli_fetch_assoc($result))
+    while($row = mysqli_fetch_assoc($result) )
     {
       $logpatientid = $row['patientid'];
       $logpatientfname = $row['firstname'];
       $logpatientlname = $row['lastname'];
+    }
+  }
+  $result2 = mysqli_query($conn, $query2) or die("Query Faild!!");
+  if(mysqli_num_rows($result2)>0){
+    while($row2 = mysqli_fetch_assoc($result2) )
+    {
+      $logdoctorfname = $row2['doctorfname'];
+      $logdoctorlname = $row2['doctorlname'];
+      $logdoctoruname = $row2['doctoruname'];
     }
   }
           
@@ -18,10 +29,6 @@ if(isset($_POST['save']))
 {
   $logdiseasename = $_POST['deseasename'];
   $loghospitalname = $_POST['hospitalname'];
-  $logdoctorfname = $_GET['dfn'];
-  $logdoctorlname = $_GET['dln'];
-  $logdoctoruname = $_GET['dun'];
-  $logdoctorid = $_GET['did'];
     $arr = array(); 
     $arr2 = array(); 
     $count = mysqli_real_escape_string($conn,$_POST['clickcount']) ;
@@ -38,10 +45,10 @@ if(isset($_POST['save']))
     }
     $logmedicinename = implode(",",$arr);
     $logtestname = implode(",",$arr2);
-    $logdate = date("d/m/y");
-    $sql = "INSERT INTO prescriptionrecord (diseasename, hospitalname, patientfname, patientlname, patientuname, patientid, doctorfname, doctorlname, doctoruname, doctorid,medicinename,testname,date) VALUES ('{$logdiseasename}','{$loghospitalname}','{$logpatientfname}','{$logpatientlname}','{$logpatientuname}','{$logpatientid}','{$logdoctorfname}','{$logdoctorlname}','{$logdoctoruname}','{$logdoctorid}','{$logmedicinename}','{$logtestname}','{$logdate}')";
+    $logdate = date("Y-m-d");
+    $sql = "INSERT INTO prescriptionrecord (diseasename, hospitalname, patientfname, patientlname, patientuname, patientid, doctorfname, doctorlname, doctoruname,medicinename,testname,date) VALUES ('{$logdiseasename}','{$loghospitalname}','{$logpatientfname}','{$logpatientlname}','{$username}','{$logpatientid}','{$logdoctorfname}','{$logdoctorlname}','{$logdoctoruname}','{$logmedicinename}','{$logtestname}','{$logdate}')";
       if(mysqli_query($conn,$sql)){
-            header("Location:{$hostname}/userinfopage.php?loguname={$logpatientuname}");
+            header("Location:{$hostname}/userinfopage.php?loguname={$username}");
         }
 }
 

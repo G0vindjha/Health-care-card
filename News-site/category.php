@@ -4,6 +4,19 @@
         <div class="row">
             <div class="col-md-8">
                 <!-- post-container -->
+              <?php
+                 if($cat_id == '49'){
+                    header("Location:{$hostname}/doctorlist.php");
+
+                }
+                else if($cat_id == '47' || $cat_id == '46' || $cat_id == '45'){  
+                    header("Location:{$hostname}/userRegistration.php");
+                }
+                else if($cat_id == '44'){  
+                    header("Location:{$hostname}/help.php");
+                }
+                else{
+              ?>
                <div class = "post-container">
                    <?php
                    include 'config.php';
@@ -98,6 +111,9 @@
                         }
                   ?>
                </div>
+            <?php
+            }
+            ?>
             </div>
             <?php include 'sidebar.php'; ?>
         </div>

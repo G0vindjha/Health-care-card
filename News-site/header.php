@@ -91,7 +91,6 @@ switch($page){
                 ?>
             </div>
             <div>
-            <a href="./userRegistration.php"><button class="btn bg-primary">Login/SignUp</button></a>
             </div>
             <!-- /LOGO -->
         </div>

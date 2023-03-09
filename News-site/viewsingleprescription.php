@@ -26,7 +26,6 @@ $deseasename = $_GET['deseasename'];
             <h3>Date : <?php echo $row7['date'];?></h3>
             <h3>Hospital :<?php echo $row7['hospitalname'];?></h3>
             <h3>Doctor Name : <?php echo $row7['doctorfname']." ".$row7['doctorlname'];?></h3>
-            <h3>Doctor Id : <?php echo $row7['doctorid'];?></h3>
             <?php
                 $arr1 = explode(",", $row7['medicinename']);
                 for($i=0;$i<sizeof($arr1);$i++)

@@ -24,16 +24,28 @@
             </lord-icon>
         </div>
         <div>
+        <?php
+        include "config.php";
+        $logduname=$_GET['logduname'];
+          $query = " select * from doctordetails where doctoruname= '{$logduname}'";
+          $result = mysqli_query($conn, $query) or die("Query Faild!!");
+          if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
             <div>
-                <h2 style="text-align:center;margin-top:-5px">Name : Govind Jha</h2>
+                <h2 style="text-align:center;margin-top:-5px"><?php echo $row['doctorfname']." ".$row['doctorlname']; ?></h2>
             </div>
             <div>
-                <div style="margin-left:10px;">
-                    <h3 class="detail">Eye Specilist</h3>
-                    <h3 class="detail">Reva Hospital</h3>
+                <div style="margin-left:100px;">
+                    <h3 class="detail"><?php echo $row['specilize']; ?></h3>
+                    <h3 class="detail"><?php echo $row['doctorvarificationno']; ?></h3>
                 </div>
-                <div style="margin-left:10px;"><span>Doctors Details</span></div>
             </div>
+            <?php
+        }
+      }
+      
+      ?>    
             <div>
                 <div style="width:100%; margin-top:10px;">
                     <form style="display:inline-block;width:48%;" action="https://wa.me/9106739843">
